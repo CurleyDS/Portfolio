@@ -25,6 +25,7 @@ function List({ data = [], favorite = false }) {
         img: ({ node, ...props }) => (
             <img
                 {...props}
+                alt=""
                 className="inline-block object-scale-down max-w-[33%] h-auto mx-auto"
             />
         ),
