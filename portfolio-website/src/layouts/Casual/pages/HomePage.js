@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from "react-router-dom";
 import { FormattedMessage } from 'react-intl';
 import List from '../components/ListComponent';
-import prflpic from '../assets/profile.jpg';
+import prflpic from '../../../assets/profile.jpg';
 
 function Home() {
     const navigate = useNavigate();

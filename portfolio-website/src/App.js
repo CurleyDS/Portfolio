@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './fontAwesome';
 import { IntlProvider } from 'react-intl';
+
 import { messages } from './i18n/messages';
-import Home from './pages/HomePage';
-import Project from './pages/ProjectPage';
-import Navbar from './components/NavComponent';
-import Footer from './components/FooterComponent';
+
+import Home from './layouts/Casual/pages/HomePage';
+import Project from './layouts/Casual/pages/ProjectPage';
+
+import Navbar from './layouts/Casual/components/NavComponent';
+import Footer from './layouts/Casual/components/FooterComponent';
+
+import './fontAwesome';
 
 function App({ switchLocale }) {
     return (
