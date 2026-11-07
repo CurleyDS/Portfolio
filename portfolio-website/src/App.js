@@ -10,6 +10,8 @@ import Project from './layouts/Casual/pages/ProjectPage';
 import Navbar from './layouts/Casual/components/NavComponent';
 import Footer from './layouts/Casual/components/FooterComponent';
 
+import { LayoutProvider } from './context/LayoutContext';
+
 import './fontAwesome';
 
 function App({ switchLocale }) {
@@ -38,11 +40,13 @@ function AppWrapper() {
     };
 
     return (
-        <IntlProvider locale={locale} messages={messages[locale]}>
-            <Router>
-                <App switchLocale={switchLocale} />
-            </Router>
-        </IntlProvider>
+        <LayoutProvider>
+            <IntlProvider locale={locale} messages={messages[locale]}>
+                <Router>
+                    <App switchLocale={switchLocale} />
+                </Router>
+            </IntlProvider>
+        </LayoutProvider>
     );
 }
 
